@@ -15,7 +15,7 @@ const addFood = async (req, res) => {
   });
   try {
     await food.save();
-    req.json({ success: true, message: "Food Added" });
+    res.json({ success: true, message: "Food Added" });
   } catch (error) {
     console.log(error);
     res.json({ success: false, message: "Error" });
@@ -39,10 +39,10 @@ export const removeFood = async (req, res) => {
     const food = await foodModel.findById(req.body.id);
     fs.unlink(`tpload/${food.image}`, () => {});
     await foodModel.findByIdAndDelete(req.body.id);
-    req.json({ success: true, message: "Food Removed..." });
+    res.json({ success: true, message: "Food Removed..." });
   } catch (error) {
     console.log(error);
-    res.json({success :false , message :"Error"})
+    res.json({ success: false, message: "Error" });
   }
 };
 
