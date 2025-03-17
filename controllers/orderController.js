@@ -5,8 +5,8 @@ import Stripe from "stripe";
 const STRIPE_SECRET_KEY =
   "sk_test_51R1lM3QOdyf66dQdlODTDWirIJsdGsLJG5sD2mNxFnYixmD0Tftp4AmpaAMNXQ03MZV2egtnD4KFvRvZONLIiban00nNhQUGiL";
 
-const frontend_url = "http://localhost:5173";
-const stripe = new Stripe(STRIPE_SECRET_KEY);
+// const frontend_url = "http://localhost:5173";
+const frontend_url = "https://food-delivery-backend-flws.onrender.com";const stripe = new Stripe(STRIPE_SECRET_KEY);
 
 const placeOrder = async (req, res) => {
   try {
