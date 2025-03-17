@@ -1,7 +1,8 @@
 import userModel from "../models/userModel.js";
 import jwt from "jsonwebtoken";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import Validator from "validator";
+
 
 export const loginUser = async (req, res) => {
   const { password, email } = req.body;
